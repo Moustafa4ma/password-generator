@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>password generator</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <h1 class="title">password generator</h1>
+        <div class="container">
+            <div class="password-field">
+                <p class="password">password</p>
+                <i class="fa-solid fa-copy copyBtn"></i>
+            </div>
+            <div class="settings">
+                <div class="slider-field">
+                    <p>character length</p>
+                    <span class="sliderValue">8</span>
+                </div>
+                <input type="range" class="slider" min="4" max="20" value="8">
+                <div class="checkbox">
+                    <input type="checkbox" id="upperCase" name="upperCase" data-checked="false" data-char="QWERTYUIOPASDFGHJKLZXCVBNM">
+                    <label for="upperCase">include uppercase letters</label>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" id="lowerCase" name="lowerCase" data-checked="false" data-char="qwertyuiopasdfghjklzxcvbnm">
+                    <label for="lowerCase">include lowercase letters</label>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" id="numbers" name="numbers" data-checked="false" data-char="0123456789">
+                    <label for="numbers">include numbers</label>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" id="symbols" name="symbols" data-checked="false" data-char="~!@#$%^&*_+|:'?/.,">
+                    <label for="symbols">include  symbols</label>
+                </div>
+                <div class="strengthDis">
+                    <p>strength</p>
+                    <span id="strength">strength level</span>
+                </div>
+                <button id="generate">generate</button>
+                <button id="historyBtn">history</button>
+            </div>
+        </div>
+        
+        <div class="historySec">
+            <i class="fa-solid fa-x" id="closeBtn"></i>
+            <div class="historyCont"></div>
+        </div>
+        
+    </div>
+    <div class="overlay"></div>
+    
+
+
+    <script src="app.js"></script>
+</body>
+</html>
